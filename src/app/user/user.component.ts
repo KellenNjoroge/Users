@@ -40,7 +40,10 @@ addNewUser(user) {
     this.http.get<ApiResponse>('https://api.github.com/users/KellenNjoroge?access_token=ed1ef4560933cae249b21bf58136daf47b546069').subscribe(data => {
       this.repo = new Repo(data.name, data.location);
         // Successful API request.
-    });
+    }, err => {
+      this.repo = new Repo('Kellen_Njoroge', 'Nairobi_Kenya');
+      console.log('Error occured ');
+  });
   }
 
 }
