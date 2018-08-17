@@ -10,6 +10,7 @@ import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
 import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {path: 'users', component: UserComponent},
   {path: 'about', component: AboutComponent}
@@ -21,7 +22,8 @@ const routes: Routes = [
     UserComponent,
     UserDetailsComponent,
     UserFormComponent,
-    AboutComponent
+    AboutComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
