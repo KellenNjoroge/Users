@@ -7,9 +7,9 @@ import {User} from '../user';
 })
 export class UserFormComponent implements OnInit {
   newUser = new User (0, '', '');
-  @Output() searchUser = new EventEmitter<User>();
+  @Output() addUser = new EventEmitter<User>();
   submitUser() {
-    this.searchUser.emit(this.newUser);
+    this.addUser.emit(this.newUser);
 }
   constructor() { }
 

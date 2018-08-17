@@ -4,7 +4,7 @@ import {Users} from '../users';
   providedIn: 'root'
 })
 export class UserService {
-    get Users() {
+    getUsers() {
       return Users;
     }
   constructor() { }
