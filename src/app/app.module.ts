@@ -13,7 +13,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {path: 'users', component: UserComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
+  {path: '', redirectTo: '/users', pathMatch: 'full'},
+  {path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({
