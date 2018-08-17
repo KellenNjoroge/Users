@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 
 
@@ -11,7 +12,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
   declarations: [
     AppComponent,
     UserComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule
