@@ -9,14 +9,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
 import { AboutComponent } from './about/about.component';
-import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from './not-found/not-found.component';
-const routes: Routes = [
-  {path: 'users', component: UserComponent},
-  {path: 'about', component: AboutComponent},
-  {path: '', redirectTo: '/users', pathMatch: 'full'},
-  {path: '**', component: NotFoundComponent}
-];
+import {RoutingModule} from './routing/routing.module';
+// import { RouterModule, Routes } from '@angular/router';
+// import { NotFoundComponent } from './not-found/not-found.component';
+// const routes: Routes = [
+//   {path: 'users', component: UserComponent},
+//   {path: 'about', component: AboutComponent},
+//   {path: '', redirectTo: '/users', pathMatch: 'full'},
+//   {path: '**', component: NotFoundComponent}
+// ];
 
 @NgModule({
   declarations: [
@@ -25,15 +26,16 @@ const routes: Routes = [
     UserDetailsComponent,
     UserFormComponent,
     AboutComponent,
-    NotFoundComponent
+    // NotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    RoutingModule,
     HttpClientModule,
     NgProgressModule.forRoot(),
     NgProgressHttpModule,
-    RouterModule.forRoot(routes)
+    // RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
