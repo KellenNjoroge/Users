@@ -1,8 +1,9 @@
 
 <ul>
   <div
-   *ngFor='let user of users'>
+   *ngFor='let user of users; let i = index'>
    <li>{{user.name}}</li>
-   <app-user-details [user]='user'></app-user-details>
+   <button (click)='toogleDetails(i)'>Show</button>
+   <app-user-details *ngIf="user.showDescription"[user]='user'></app-user-details>
   </div>
 </ul>

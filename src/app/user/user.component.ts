@@ -9,7 +9,9 @@ export class UserComponent implements OnInit {
   users = [
     new User(1, 'Kellen', '30 repositories so far'),
   ];
-
+  toogleDetails(index) {
+    this.users[index].showDescription = !this.users[index].showDescription;
+}
   constructor() { }
 
   ngOnInit() {
