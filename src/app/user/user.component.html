@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row">
-        <app-user-form (searchUser)="searchNewUser($event)"></app-user-form>
+        <app-user-form (addUser)="addNewUser($event)"></app-user-form>
     </div>
 </div>
 <hr>
 <ul>
   <div
    *ngFor='let user of users; let i = index'>
-   <li>{{searchName}}</li>
+   <li>{{user.name}}</li>
    <button (click)='toogleDetails(i)'>Show</button>
    <app-user-details *ngIf="user.showDescription"[user]='user'></app-user-details>
   </div>
