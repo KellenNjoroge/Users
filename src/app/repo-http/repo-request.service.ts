@@ -8,25 +8,32 @@ import {Repo} from '../repo-class/repo';
 export class RepoRequestService {
   repo: Repo;
   constructor(private http: HttpClient) {
-    this.repo = new Repo('', '');
+    this.repo = new Repo('', '', '', '');
   }
   repoRequest() {
 
     interface ApiResponse {
         name: any;
         location: any;
+        gravatar_id: any;
+        avatar_url: any;
 
     }
     const promise = new Promise((resolve, reject) => {
         this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(response => {
             this.repo.name = response.name;
             this.repo.location = response.location;
+            this.gravatar_id = response.gravatar_id;
+            this.avatar_url = response.avatar_url;
 
             resolve();
         },
         error => {
                 this.repo.name = 'Kellen_Njoroge.';
                 this.repo.location = 'Nairobi_Kenya';
+                this.gravatar_id = '';
+                this.avatar_url = '',
+
                 reject(error);
             }
         );
