@@ -8,6 +8,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NgProgressHttpModule } from '@ngx-progressbar/http';
     AppComponent,
     UserComponent,
     UserDetailsComponent,
-    UserFormComponent
+    UserFormComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
