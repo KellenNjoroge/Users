@@ -21,12 +21,16 @@ export class UserComponent implements OnInit {
   toogleDetails(index) {
     this.users[index].showDescription = !this.users[index].showDescription;
 }
-addNewUser(user) {
+  addNewUser(user) {
   const userLength = this.users.length;
   user.id = userLength + 1;
   this.users.push(user);
 
-}
+  }
+  doSearch(term: string) {
+
+  }
+
   // tslint:disable-next-line:member-ordering
 
   ngOnInit() {

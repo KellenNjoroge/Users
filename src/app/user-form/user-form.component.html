@@ -3,8 +3,8 @@
         <form (ngSubmit)='submitUser()' #userform='ngForm'>
             <div class="form-group">
                 <label for="name"> username</label>
-                <input type="text" class="form-control" id="name" [(ngModel)]="newUser.name" placeholder="Search.." name="name" #name="ngModel" required>
-                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <input type="search" class="form-control" id="name" [(ngModel)]="newUser.name" placeholder="Search.." name="name" #search="ngModel" required>
+                <div [hidden]="search.valid || search.pristine" class="alert alert-danger">
                     <p> Name is Required</p>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                   <p> Description is Required</p>
               </div>
           </div>-->
-          <button type="Submit" class="btn btn-success btn-lg">Search</button>
+          <button type="Submit" class="btn btn-success btn-lg" (click)="doSearch(search.value)">Search</button>
         </form>
     </div>
 </div>
