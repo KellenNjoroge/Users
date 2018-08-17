@@ -9,7 +9,11 @@ import {HttpClientModule} from '@angular/common/http';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
 import { AboutComponent } from './about/about.component';
-
+import { RouterModule, Routes } from '@angular/router';
+const routes: Routes = [
+  {path: 'users', component: UserComponent},
+  {path: 'about', component: AboutComponent}
+];
 
 @NgModule({
   declarations: [
@@ -24,7 +28,8 @@ import { AboutComponent } from './about/about.component';
     FormsModule,
     HttpClientModule,
     NgProgressModule.forRoot(),
-    NgProgressHttpModule
+    NgProgressHttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
