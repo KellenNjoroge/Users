@@ -2,7 +2,7 @@
     <div class="row">
         <form (ngSubmit)='submitUser()' #userform='ngForm'>
             <div class="form-group">
-                <label for="name">  User Name</label>
+                <label for="name"> username</label>
                 <input type="text" class="form-control" id="name" [(ngModel)]="newUser.name" placeholder="Search.." name="name" #name="ngModel" required>
                 <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
                     <p> Name is Required</p>
@@ -16,7 +16,7 @@
                   <p> Description is Required</p>
               </div>
           </div>-->
-          <button type="Submit" class="btn btn-success btn-lg">Add User</button>
+          <button type="Submit" class="btn btn-success btn-lg">Search</button>
         </form>
     </div>
 </div>

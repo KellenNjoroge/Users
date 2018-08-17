@@ -1,5 +1,12 @@
 <div class="container">
     <div class="row">
+        <blockquote class="text-center text-lg">
+            <p>{{repo.name}}</p>
+            <footer><cite>{{repo.location}}</cite></footer>
+        </blockquote>
+    </div>
+  <hr>
+    <div class="row">
         <app-user-form (addUser)="addNewUser($event)"></app-user-form>
     </div>
 </div>
