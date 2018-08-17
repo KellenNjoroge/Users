@@ -7,8 +7,5 @@ import { User } from './user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Users';
-  users = [
-    new User(1, 'Kellen'),
-  ];
+  title = 'Github Search';
 }
