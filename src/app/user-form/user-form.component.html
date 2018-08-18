@@ -2,8 +2,8 @@
     <div class="row">
         <form (ngSubmit)='submitUser()' #userform='ngForm'>
             <div class="form-group">
-                <label for="name"> username</label>
-                <input type="search" class="form-control" id="name" [(ngModel)]="newUser.name" placeholder="Search.." name="name" #search="ngModel" required>
+                <label for="Search"> username</label>
+                <input type="search" class="form-control" id="name" [(ngModel)]="searchString" placeholder="Search.." name="search" #search="ngModel" required>
                 <div [hidden]="search.valid || search.pristine" class="alert alert-danger">
                     <p> Name is Required</p>
                 </div>
@@ -16,7 +16,7 @@
                   <p> Description is Required</p>
               </div>
           </div>-->
-          <button type="Submit" class="btn btn-success btn-lg" (click)="doSearch(search.value)">Search</button>
+          <button type="Submit" class="btn btn-success btn-lg" (click)="doSearch(search.value)"><i class="fa fa-search"></i></button>
         </form>
     </div>
 </div>
