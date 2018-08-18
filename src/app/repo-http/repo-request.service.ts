@@ -22,7 +22,7 @@ export class RepoRequestService {
     const promise = new Promise((resolve, reject) => {
         this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(response => {
             this.repo.name = response.name;
-            this.repo_id = response.id;
+            this.repo.id = response.id;
             this.repo.avatar_url = response.avatar_url;
             this.repo.repos_url = response.repos_url;
             resolve();
