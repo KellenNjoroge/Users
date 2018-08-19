@@ -3,7 +3,6 @@
   <hr>
     <div class="row">
         <app-user-form (searchString)="searchString($event)"></app-user-form>
-    </div>
 </div>
 <hr>
 <ul>
@@ -14,3 +13,5 @@
    <app-user-details *ngIf="user.showDescription"[user]='user'></app-user-details>
   </div>
 </ul>
+<!--<app-user-form (searchString)="searchString($event)"></app-user-form>
+-->
