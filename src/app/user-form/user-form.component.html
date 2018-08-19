@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div class="row">
         <form (ngSubmit)='submitUser()' #userform='ngForm'>
-            <div class="form-group">
+            <div class="form-control">
                 <label for="Search"> username</label>
-                <input type="search" class="form-control" id="name" [(ngModel)]="searchString" placeholder="Search.." name="search" #search="ngModel" required>
+                <input type="search" class="form-control" id="name" [(ngModel)]="search.value" placeholder="Search.." name="search" #search="ngModel" required>
                 <div [hidden]="search.valid || search.pristine" class="alert alert-danger">
                     <p> Name is Required</p>
                 </div>
