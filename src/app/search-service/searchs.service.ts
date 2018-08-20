@@ -12,16 +12,16 @@ export class SearchsService {
   constructor(private http: Http) {
     this.results = [];
   }
- search(term: string) {
- const promise = new Promise((resolve, reject) => {
-  const apiURL =  `${this.apiRoot}?term=$user`;
-  this.http.get(apiURL);
-   .toPromise()
-   .then(
-     res => {
-      console.log(res.json());
-     });
-     return promise;
- })
- }
+//  search(term: string) {
+//  const promise = new Promise((resolve, reject) => {
+//   const apiURL =  `${this.apiRoot}?term=$user`;
+//   this.http.get(apiURL);
+//    .toPromise()
+//    .then(
+//      res => {
+//       console.log(res.json());
+//      });
+//      return promise;
+//  })
+//  }
 }
