@@ -1,13 +1,19 @@
 <ng-progress></ng-progress>
 <div class = "card">
-  <div class="row">
-    <div class="text-center text-lg">
-        <p>{{repo.name}}</p>
-        <p> <img src ="{{repo.avatar_url}}"></p>
-        <div *ngFor='let repo of repo'>
-         <ul>  {{repo.repos_url}}
-         </ul>
-         </div>
-    </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{repo.avatar_url}}" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">{{repo.name}}</p>
+      </div>
+      <div *ngFor='let repo of repo'>
+      <ul>
+          <li> {{repo.repos_url}}</li>
+      </ul>
+      </div>
   </div>
 </div>
+
+<!-- <img class="card-img-top" src="{{repo.avatar_url}}" alt="Card image cap">
+<div class="card-body">
+  <p class="card-text">{{repo.name}}</p>
+</div> -->
