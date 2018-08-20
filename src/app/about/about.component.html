@@ -4,7 +4,10 @@
     <div class="text-center text-lg">
         <p>{{repo.name}}</p>
         <p> <img src ="{{repo.avatar_url}}"></p>
-        <p>{{repo.repos_url}}</p>
+        <div *ngFor='let repo of repo'>
+         <ul>  {{repo.repos_url}}
+         </ul>
+         </div>
     </div>
   </div>
 </div>

@@ -10,7 +10,7 @@ export class RepoRequestService {
   constructor(private http: HttpClient) {
     this.repo = new Repo('', '', '', '');
   }
-  repoRequest() {
+  nameRequest() {
 
     interface ApiResponse {
         name: any;
@@ -32,6 +32,27 @@ export class RepoRequestService {
                 this.repo.id = '';
                 this.repo.avatar_url = '';
                 this.repo.repos_url = '';
+
+                reject(error);
+            }
+        );
+    });
+
+    return promise;
+  }
+  reposRequest() {
+
+    interface ApiResponse {
+        repos_url: any;
+
+    }
+    const promise = new Promise((resolve, reject) => {
+        this.http.get<ApiResponse>(environment.repoUrl).toPromise().then(response => {
+            this.repo.repos_url = response.repos_url;
+            resolve();
+        },
+        error => {
+                this.repo.repos_url = 'woops';
 
                 reject(error);
             }

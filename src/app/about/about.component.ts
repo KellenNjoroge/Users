@@ -14,7 +14,9 @@ export class AboutComponent implements OnInit {
   constructor(private http: HttpClient, private repoService: RepoRequestService)  {
      }
   ngOnInit() {
-    this.repoService.repoRequest();
+    this.repoService.nameRequest();
+    this.repo = this.repoService.repo;
+    this.repoService.reposRequest();
     this.repo = this.repoService.repo;
   }
 }
