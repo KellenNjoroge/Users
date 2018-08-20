@@ -6,21 +6,40 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-
+import {HttpModule} from '@angular/http';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpModule } from '@ngx-progressbar/http';
+import { AboutComponent } from './about/about.component';
+import {RoutingModule} from './routing/routing.module';
+import {SearchsService} from './search-service/searchs.service';
+import { NotFoundComponent } from './not-found/not-found.component';
+// const routes: Routes = [
+//   {path: 'users', component: UserComponent},
+//   {path: 'about', component: AboutComponent},
+//   {path: '', redirectTo: '/users', pathMatch: 'full'},
+//   {path: '**', component: NotFoundComponent}
+// ];
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     UserDetailsComponent,
-    UserFormComponent
+    UserFormComponent,
+    AboutComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    RoutingModule,
+    HttpClientModule,
+    HttpModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpModule,
+    // RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [SearchsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

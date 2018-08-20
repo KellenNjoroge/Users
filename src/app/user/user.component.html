@@ -1,21 +1,17 @@
+<ng-progress></ng-progress>
 <div class="container">
-    <div class="row">
-        <blockquote class="text-center text-lg">
-            <p>{{repo.name}}</p>
-            <footer><cite>{{repo.location}}</cite></footer>
-        </blockquote>
-    </div>
   <hr>
     <div class="row">
-        <app-user-form (addUser)="addNewUser($event)"></app-user-form>
-    </div>
+        <app-user-form (searchString)="searchString($event)"></app-user-form>
 </div>
 <hr>
 <ul>
   <div
    *ngFor='let user of users; let i = index'>
-   <li>{{user.name}}</li>
+   <li>{{user}}</li>
    <button (click)='toogleDetails(i)'>Show</button>
    <app-user-details *ngIf="user.showDescription"[user]='user'></app-user-details>
   </div>
 </ul>
+<!--<app-user-form (searchString)="searchString($event)"></app-user-form>
+-->
